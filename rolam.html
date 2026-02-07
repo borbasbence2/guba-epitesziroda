@@ -1,11 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
   <head>
     <meta charset="UTF-8" />
     <title>Guba Építésziroda</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="layout.css" />
     <link rel="stylesheet" href="components.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
@@ -14,7 +21,7 @@
     <header class="navbar">
       <div class="container navbar-inner">
         <div class="logo-wrap">
-          <a href="home_v1.2.html"
+          <a href="index.html"
             ><img src="logo.svg" alt="" class="logo-box"
           /></a>
         </div>
@@ -29,8 +36,7 @@
         <!-- Linkek -->
         <nav class="nav-links" id="navLinks">
           <a href="rolam.html">Rólam</a>
-          <a href="tervezesidij.html">Tervezési díj</a>
-          <a href="tudnivalok.html">Tudnivalók</a>
+          <a href="szolgaltatasok.html">Szolgáltatások</a>
           <a href="kapcsolat.html">Kapcsolat</a>
         </nav>
       </div>
@@ -38,67 +44,124 @@
 
     <section class="hero">
       <div class="container grid-2 about-grid">
+        <img src="handshake.jpg" alt="" />
         <div>
           <div class="hero-eyebrow">Rólam</div>
           <h1>Építészeti szemlélet.</h1>
           <p class="hero-subtitle">
             "Tedd, vagy ne tedd, de sohase próbáld!" – Yoda (Star Wars)
           </p>
+          <div>
+            <p class="section-text-black">
+              Építészként olyan tereket tervezek, amelyek hosszú távon is jól
+              használhatók, átgondoltak és arányaikban kiegyensúlyozottak.
+              Munkám során fontosnak tartom a
+              <span class="highlight">világos kommunikációt</span>, a folyamatok
+              <span class="highlight"> előre átlátható ismertetését </span> és
+              azt, hogy a terv minden részlete funkcióhoz legyen kötve.
+            </p>
+            <p class="section-text mt-2">
+              Tapasztalatom elsősorban
+              <span class="highlight">gazdasági épületek</span> és
+              <span class="highlight"> belsőépítészeti projektek </span>
+              tervezésében van; a részletek iránti érzékenység és a
+              letisztultság minden tervben visszaköszön.
+            </p>
+          </div>
         </div>
-        <img src="handshake.jpg" alt="" />
       </div>
     </section>
 
-    <section>
+    <section class="section-bg">
       <div class="container">
-        <div class="section-label">Szakmai háttér</div>
-        <h2 class="section-title">Bemutatkozás</h2>
         <div>
-          <p class="section-text">
-            Építészként olyan tereket tervezek, amelyek hosszú távon is jól
-            használhatók, átgondoltak és arányaikban kiegyensúlyozottak. Munkám
-            során fontosnak tartom a világos kommunikációt, a folyamatok előre
-            átlátható ismertetését és azt, hogy a terv minden részlete
-            funkcióhoz legyen kötve.
-          </p>
-          <p class="section-text mt-2">
-            Tapasztalatom elsősorban gazdasági épületek és belsőépítészeti
-            projektek tervezésében van; a részletek iránti érzékenység és a
-            letisztultság minden tervben visszaköszön.
-          </p>
+          <div class="section-label">Szakmai háttér</div>
+          <h2 class="section-title">Mivel foglalkozom</h2>
+          <div>
+            <p class="section-text">
+              Építészként olyan tereket tervezek, amelyek hosszú távon is jól
+              használhatók, átgondoltak és arányaikban kiegyensúlyozottak.
+              Munkám során fontosnak tartom a világos kommunikációt, a
+              folyamatok előre átlátható ismertetését és azt, hogy a terv minden
+              részlete funkcióhoz legyen kötve.
+            </p>
+            <p class="section-text mt-2">
+              Tapasztalatom elsősorban gazdasági épületek és belsőépítészeti
+              projektek tervezésében van; a részletek iránti érzékenység és a
+              letisztultság minden tervben visszaköszön.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="about-tapasztalat-section">
-      <div class="container grid-2">
-        <div>
-          <h2 class="section-title">Munkáim</h2>
+    <!-- SZOLGÁLTATÁSOK -->
+      <section id="tudnivalok" class="section-bg services">
+        <div class="container">
+          <div class="section-label">Szolgáltatások</div>
+          <h2 class="section-title">Miben tudok segíteni?</h2>
           <p class="section-text">
-            Munkahelyeim, projektjeim, fontos megemlíteni
+            Az együttműködés során végigkísérem a folyamatot az első
+            konzultációtól a kész tervdokumentációig és igény esetén a
+            kivitelezés támogatásáig.
           </p>
-        </div>
 
-        <div>
-          <h2 class="section-title">Utam idáig</h2>
-          <p class="section-text">
-            Tanulmányaim, workshopok, továbbképzések amiken résztvettem
-          </p>
+          <div class="services-grid">
+            <div class="service-item">
+              <div class="service-title">Gazdasági épületek megtervezése</div>
+              <div class="service-text">
+                Különféle gazdasági épületek, amelyet vállalkozása használni
+                tud.
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-title">Belsőépítészeti koncepció</div>
+              <div class="service-text">
+                Alaprajzi kialakítás, anyaghasználat, fények és bútorozás
+                egységes szemlélettel.
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-title">Engedélyezési és kiviteli terv</div>
+              <div class="service-text">
+                A hatósági engedélyezéshez és a kivitelezéshez szükséges
+                dokumentáció elkészítése.
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-title">Tanácsadás</div>
+              <div class="service-text">
+                Telekválasztási, beépíthetőségi és alaprajzi lehetőségek
+                átbeszélése már a tervezés előtt.
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-title">Látványtervezés</div>
+              <div class="service-text">
+                Koncepcionális látványok, amelyek segítenek a tér és arányok
+                megértésében.
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-title">Kivitelezés támogatása</div>
+              <div class="service-text">
+                Egyeztetés a kivitelezővel, szükség esetén tervmódosítás,
+                részletkép kidolgozás.
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <section class="cta-section">
       <div class="container">
         <div class="cta-card">
           <h2 class="cta-title">
-            Nézze meg, hogyan zajlik a tervezés, és milyen tervezési díjakkal
-            dolgozom.
-          </h2>
+            Nézd meg, hogy pontosan milyen szolgáltatásokkal tudok neked segíteni vagy lépjünk kapcsolatba.</h2>
           <div class="about-two-buttons mt-4">
-            <a href="tudnivalok.html" class="btn btn-primary">Tudnivalók</a>
-            <a href="tervezesidij.html" class="btn btn-outline"
-              >Tervezési díj &amp; ajánlatkérés</a
+            <a href="szolgaltatasok.html" class="btn btn-primary">Szolgáltatások</a>
+            <a href="kapcsolat.html" class="btn btn-outline"
+              >Kapcsolat</a
             >
           </div>
         </div>
@@ -114,6 +177,11 @@
         </div>
       </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
     <script>
       // Hamburger logika
