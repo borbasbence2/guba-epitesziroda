@@ -1,8 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
   <head>
     <meta charset="UTF-8" />
     <title>Guba Építésziroda</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="layout.css" />
     <link rel="stylesheet" href="components.css" />
@@ -14,7 +20,7 @@
     <header class="navbar">
       <div class="container navbar-inner">
         <div class="logo-wrap">
-          <a href="home_v1.2.html"
+          <a href="index.html"
             ><img src="logo.svg" alt="" class="logo-box"
           /></a>
         </div>
@@ -29,14 +35,96 @@
         <!-- Linkek -->
         <nav class="nav-links" id="navLinks">
           <a href="rolam.html">Rólam</a>
-          <a href="tervezesidij.html">Tervezési díj</a>
-          <a href="tudnivalok.html">Tudnivalók</a>
+          <a href="szolgaltatasok.html">Szolgáltatások</a>
           <a href="kapcsolat.html">Kapcsolat</a>
         </nav>
       </div>
     </header>
 
-    <section></section>
+    <main>
+      <section class="py-0">
+        <div class="px-4 py-3 text-center contactmehero">
+          <img
+            class="d-block mx-auto mb-4"
+            src="ikonok/highfive.svg"
+            alt=""
+            width=10%
+            height=auto
+          />
+          <h1 class="display-5 fw-bold text-body-emphasis">
+            Dolgozzunk együtt
+          </h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+              Köszönöm, hogy meglátogattad a weboldalt! A következő lépés, hogy
+              megbeszéljük miben tudok segíteni neked.
+            </p>
+          </div>
+        </div>
+
+        <div class="container px-4 py-5">
+          <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+              <div
+                class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+              >
+                <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                  <use xlink:href="ikonok/email.svg"></use>
+                </svg>
+              </div>
+              <h3 class="fs-2 text-body-emphasis">Írj e-mailt</h3>
+              <p>
+                Paragraph of text beneath the heading to explain the heading.
+                We'll add onto it with another sentence and probably just keep
+                going until we run out of words.
+              </p>
+              <div class="btn btn-outline">
+                <a href="mailto:info@gubaepitesziroda.hu" class="icon-link">
+                  E-mail írás</a>
+              </div>
+            </div>
+            <div class="feature col">
+              <div
+                class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+              >
+                <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                  <use xlink:href="ikonok/telefon.svg"></use>
+                </svg>
+              </div>
+              <h3 class="fs-2 text-body-emphasis">Hívj fel</h3>
+              <p>
+                Paragraph of text beneath the heading to explain the heading.
+                We'll add onto it with another sentence and probably just keep
+                going until we run out of words.
+              </p>
+              <div class="btn btn-outline">
+                <a href="tel:3630123123" class="icon-link">
+                  Hívás              </a>
+              </div>
+            </div>
+            <div class="feature col">
+              <div
+                class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+              >
+                <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                  <use xlink:href="ikonok/contact.svg"></use>
+                </svg>
+              </div>
+              <h3 class="fs-2 text-body-emphasis">Elérhetőség</h3>
+              <p>
+                Paragraph of text beneath the heading to explain the heading.
+                We'll add onto it with another sentence and probably just keep
+                going until we run out of words.
+              </p>
+                <svg class="bi" aria-hidden="true">
+                  <use xlink:href="#chevron-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="container footer-row">
