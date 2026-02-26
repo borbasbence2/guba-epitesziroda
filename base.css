@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+.blacktext{
+  color: var(--text)
+}
+
 /* -------- SZÍNEK / VÁLTOZÓK -------- */
 :root {
   --primary: #0377ad;
@@ -38,5 +42,14 @@ a {
   --card-bg: #fafafa;
 
   --border: #e4e4e4;
+
+  --service-headcolor-1: #d9eef9;
+  --service-headcolor-2: #ecebea;
+  --service-headcolor-3: #e2eaf2;
+
+
+  --service-bg-1: #eef7fc;
+  --service-bg-2: #f5f5f3;
+  --service-bg-3: #f1f4f7;
 }
 

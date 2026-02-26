@@ -14,12 +14,6 @@
   justify-content: space-between;
 }
 
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
 /* .logo-text-main {
   font-size: 1.3rem;
   font-weight: 600;
@@ -132,8 +126,30 @@
   color: #fff;
 }
 
+.btn-hero {
+  background: black;
+  color: #fff;
+}
+
+.btn-hero:hover {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
 .btn-primary:hover {
   background: var(--primary-light);
+}
+
+.btn-herosecondary {
+  border: 1px solid black;
+  color: black;
+  background: white;
+}
+
+.btn-herosecondary:hover {
+  background: black;
+  color: white;
 }
 
 .btn-outline {
@@ -146,7 +162,45 @@
   background: rgba(3, 119, 173, 0.06);
 }
 
+/* -------- DIVIDERS -------- */
+
 /* -------- HERO -------- */
+
+.homeherobg {
+  background-image: url(homehero.jpg);
+  background-position: 25% 75%;
+  height: 100vh;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+@media (max-width: 768px) {
+  .homeherobg {
+    background-position: 45% 55%;
+    height: 90vh;
+  }
+
+  .two-buttons{
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    
+  }
+
+  .two-buttons .btn-hero{
+    width:fit-content ;
+  }
+
+  .two-buttons .btn-herosecondary{
+    width:fit-content;
+} 
+
+.hero-content{
+  max-width:60%; 
+}
+}
+
 .hero {
   padding: 110px 0 80px;
 }
@@ -156,6 +210,14 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.hero-eyebrow-black {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text);
   margin-bottom: 10px;
 }
 
@@ -173,6 +235,13 @@
   margin-bottom: 30px;
 }
 
+.hero-subtitle-black {
+  font-size: 1.1rem;
+  color: var(--text);
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+
 .two-buttons {
   display: flex;
   gap: 16px;
@@ -183,6 +252,12 @@
   margin-top: 18px;
   font-size: 0.9rem;
   color: var(--gray);
+}
+
+.hero-note-black {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: var(--text);
 }
 
 .hero-right {
@@ -245,6 +320,7 @@
 /* -------- Section Styles, Dividers  -------- */
 
 .section-bg-bottom {
+  position:relative;
   background: var(--bg-soft);
   border-bottom: 1px solid var(--bg-soft);
   border-bottom-right-radius: 100px;
@@ -255,12 +331,31 @@
 }
 
 .section-bg {
+  position: relative;
   background: var(--bg-soft);
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-bottom: 1px solid var(--bg-soft);
   border-radius: 100px;
+}
+
+.section-bg-noradius {
+  background: var(--bg-soft);
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-bottom: 1px solid var(--bg-soft);
+}
+
+@media (max-width: 768px) {
+  .section-bg-bottom {
+    border-radius: 25px;
+  }
+
+  .section-bg {
+    border-radius: 25px;
+  }
 }
 
 .highlight {
@@ -383,20 +478,121 @@
   --bs-accordion-active-bg: var(--bs-primary-bg-subtle);
 } */
 
-.accordion-item {
-}
-
 /* Contactme */
 
-.contactmehero {
-  background-color: var(--bg-soft);
-}
-
 /* -------- SZOLGÁLTATÁSOK -------- */
-.services {
-  background: var(--bg-soft);
+.hatosagi {
+  border-color: var(--service-headcolor-1) !important;
 }
 
+.engededelyezesi {
+  border-color: var(--service-headcolor-2) !important;
+}
+
+.fennmaradasi {
+  border-color: var(--service-headcolor-3) !important;
+}
+
+.home-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 4em 2rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 640px) {
+  .home-services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .home-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-services-grid > :nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-services-card {
+  border-radius: 6px;
+  box-shadow: 0 20px 40px 0 rgba(173, 181, 189, 0.1);
+  border: solid 1px rgba(129, 147, 174, 0.12);
+  background-color: #fff;
+  padding: 2.5em;
+  text-align: center;
+  position: relative;
+}
+
+.home-services-card:first-child::before {
+  content: "";
+  position: absolute;
+  background-color: var(--service-headcolor-1);
+  top: -8px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: 8px;
+  border-radius: 6px 6px 0 0;
+}
+
+.home-services-card:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background-color: var(--service-headcolor-2);
+  top: -8px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: 8px;
+  border-radius: 6px 6px 0 0;
+}
+
+.home-services-card:last-child::before {
+  content: "";
+  position: absolute;
+  background-color: var(--service-headcolor-3);
+  top: -8px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: 8px;
+  border-radius: 6px 6px 0 0;
+}
+
+.home-services-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+.home-services-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.card-body {
+  padding-top: 1rem;
+}
+
+.home-services-grid:nth-child(1) {
+  background: var(--service-bg-1);
+}
+.home-services-grid:nth-child(2) {
+  background: var(--service-bg-2);
+}
+.home-services-grid:nth-child(3) {
+  background: var(--service-bg-3);
+}
+
+.services{
+  position:relative;
+}
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -434,15 +630,15 @@
 /* -------- FOLYAMAT / LÉPÉSEK -------- */
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 26px;
   margin-top: 32px;
 }
 
-@media (max-width: 900px) {
-  .steps-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.steps-grid > :nth-child(5) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 50%;
 }
 
 @media (max-width: 640px) {
@@ -468,6 +664,7 @@
 .step-title {
   font-size: 1rem;
   margin-bottom: 6px;
+  font-weight: bold;
 }
 
 .step-text {
